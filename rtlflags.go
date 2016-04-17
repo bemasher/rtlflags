@@ -125,3 +125,11 @@ func (s *SamplingMode) Set(val string) (err error) {
 	}
 	return fmt.Errorf("invalid sampling mode: %q", val)
 }
+
+type RadioNopBW struct {
+	Radio
+}
+
+func (r *RadioNOPBW) SetTunerBw(int) error {
+	return nil
+}
